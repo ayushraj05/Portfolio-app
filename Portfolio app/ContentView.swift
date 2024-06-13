@@ -20,21 +20,24 @@ struct ContentView: View {
                     .frame(width: 150,height: 150)
                     .clipShape(Circle())
                     .overlay{
-                        Circle().stroke(Color(.brandOrange), lineWidth: 4)
+                        Circle().stroke(Color(.brandRed), lineWidth: 4)
                     }
                 Text("Ayush Rajpal")
-                    .foregroundColor(Color(.brandOrange))
+                    .foregroundColor(Color(.brandRed))
                     .font(.system(size: 40))
                     .font(.headline)
                     .bold()
                 Text("iOS Devloper")
-                    .foregroundColor(Color(.brandOrange))
+                    .foregroundColor(Color(.brandRed))
                     .font(.system(size: 25))
                 Divider()
-                RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/)
-                    .frame(height: 50)
-                    .foregroundColor(.brandLightGreay)
+                
+                InfoView(imageName: "phone.fill", text: "+91 9950XXXXXXX")
+                
+                InfoView(imageName: "envelope.fill", text: "ayushrajpal2021@gmail.com")
+                
             }
+            .padding(.all)
         }
         
     }
@@ -43,3 +46,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
+
